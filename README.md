@@ -90,6 +90,9 @@ plot(fw2);
 ### Output:
 <img width="1919" height="1199" alt="Screenshot 2025-12-05 123322" src="https://github.com/user-attachments/assets/3fd50288-01ff-4462-a5fd-4afb9d0f8864" />
 
+![WhatsApp Image 2025-12-05 at 16 33 04](https://github.com/user-attachments/assets/15726d93-c965-4e6f-ab3d-7cc907fa7177)
+
+
 ---
 
 ### Result:
