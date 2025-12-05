@@ -47,32 +47,48 @@ $$ACF = R_{xx}(\tau) = l FT [S_{xx}(\omega)] = \frac{1}{2 \pi} \int_{-\infty}^{\
 ### Program:
 
 ```sci
-Am=4.7
-Ac=9.7
-fm=360;
-fc=3600;
-fs = 36000;                   
-t = 0:1/fs:1;                
-x = sin(6*t);
-[acor, lag] = xcorr(x, x);   
-N = length(x);
-X = fft(x);
-PSD = (1/(fs*N)) * abs(X).^2;
-f = (0:N-1)*(fs/N);
-subplot(3,1,1);
-plot(t, x);
-subplot(3,1,2);
-plot(lag/fs, acor);
-subplot(3,1,3);
-plot(f, PSD);
+clc
+
+clear all;
+
+t=0:0.01:2*3.14;
+
+x=sin(3*t)+cos(4*t);
+
+subplot(3,2,1);
+
+plot(x);
+
+au=xcorr(x);
+
+subplot(3,2,2);
+
+plot(au);
+
+v=fft(au);
+
+subplot(3,2,3);
+
+plot(abs(v));
+
+fw=fft(x);
+
+subplot(3,2,4);
+
+plot(fw);
+
+fw2=(abs(fw))^2;
+
+subplot(3,2,5);
+
+plot(fw2);
 
 ```
 
 ---
 
 ### Output:
-
-<img width="1918" height="1198" alt="image" src="https://github.com/user-attachments/assets/244347d7-3364-4bd7-9ef0-406615dd47c4" />
+<img width="755" height="621" alt="Screenshot 2025-12-05 123338" src="https://github.com/user-attachments/assets/fd581643-71a9-4c26-82f3-1a5cef3ca8c9" />
 
 ---
 
